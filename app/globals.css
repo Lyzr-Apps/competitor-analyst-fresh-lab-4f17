@@ -47,3 +47,13 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Move Architect badge to bottom-right to avoid blocking left-side content */
+#architect-badge-trigger {
+  left: auto !important;
+  right: 20px !important;
+}
+#architect-badge-card {
+  left: auto !important;
+  right: 20px !important;
+}

@@ -843,7 +843,7 @@ function DashboardView({
 
         {/* Configuration Section */}
         <Separator />
-        <Card className="bg-card/60 backdrop-blur-md border-border/60 shadow-sm relative z-[1000000]">
+        <Card className="bg-card/60 backdrop-blur-md border-border/60 shadow-sm">
           <CardHeader>
             <CardTitle className="font-serif text-lg">Analysis Configuration</CardTitle>
             <CardDescription>Configure competitors and product metrics to generate a comprehensive competitive analysis</CardDescription>
