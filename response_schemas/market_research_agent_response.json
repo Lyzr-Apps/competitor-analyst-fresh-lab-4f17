@@ -1,0 +1,56 @@
+{
+  "agent_name": "Market Research Agent",
+  "agent_id": "698f049729d2085311337207",
+  "description": "Searches web for real-time competitor activities, product launches, pricing changes, and market movements using Perplexity's web search capabilities",
+  "agent_type": "json",
+  "accessor": "result",
+  "auto_generated": true,
+  "response_schema": {
+    "competitors": [
+      {
+        "name": "string",
+        "activities": [
+          {
+            "category": "string",
+            "title": "string",
+            "description": "string",
+            "date": "string",
+            "impact": "string",
+            "source": "string",
+            "confidence": "number"
+          }
+        ],
+        "threat_level": "string",
+        "summary": "string"
+      }
+    ],
+    "market_overview": "string",
+    "key_trends": [
+      "string"
+    ]
+  },
+  "example_response": {
+    "competitors": [
+      {
+        "name": "sample string",
+        "activities": [
+          {
+            "category": "sample string",
+            "title": "sample string",
+            "description": "sample string",
+            "date": "sample string",
+            "impact": "sample string",
+            "source": "sample string",
+            "confidence": 0
+          }
+        ],
+        "threat_level": "sample string",
+        "summary": "sample string"
+      }
+    ],
+    "market_overview": "sample string",
+    "key_trends": [
+      "sample string"
+    ]
+  }
+}

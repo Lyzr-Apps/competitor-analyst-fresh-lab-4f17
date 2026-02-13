@@ -1,0 +1,80 @@
+{
+  "nodes": [
+    {
+      "id": "input_node",
+      "type": "Input",
+      "label": "User Query",
+      "nodeCategory": "input"
+    },
+    {
+      "id": "manager_agent",
+      "type": "Agent",
+      "label": "Competitive Intelligence Manager",
+      "nodeCategory": "agent",
+      "agent_id": "698f04b7e3e5b5e3c4815d1e",
+      "provider": "openai",
+      "model": "gpt-4.1",
+      "temperature": 0.3,
+      "managed_agents": [
+        "698f049729d2085311337207",
+        "698f0498e3e5b5e3c4815d17",
+        "698f0498ed4ba4329f382703"
+      ]
+    },
+    {
+      "id": "market_research_agent",
+      "type": "Agent",
+      "label": "Market Research Agent",
+      "nodeCategory": "agent",
+      "agent_id": "698f049729d2085311337207",
+      "provider": "perplexity",
+      "model": "sonar-reasoning-pro",
+      "temperature": 0.2
+    },
+    {
+      "id": "benchmarking_agent",
+      "type": "Agent",
+      "label": "Benchmarking Agent",
+      "nodeCategory": "agent",
+      "agent_id": "698f0498e3e5b5e3c4815d17",
+      "provider": "anthropic",
+      "model": "claude-sonnet-4-5",
+      "temperature": 0.3
+    },
+    {
+      "id": "trend_analysis_agent",
+      "type": "Agent",
+      "label": "Trend Analysis Agent",
+      "nodeCategory": "agent",
+      "agent_id": "698f0498ed4ba4329f382703",
+      "provider": "openai",
+      "model": "gpt-4.1",
+      "temperature": 0.4
+    },
+    {
+      "id": "distribution_agent",
+      "type": "Agent",
+      "label": "Report Distribution Agent",
+      "nodeCategory": "agent",
+      "agent_id": "698f04d629d2085311337211",
+      "provider": "openai",
+      "model": "gpt-4.1",
+      "temperature": 0.2,
+      "tools": ["GMAIL_SEND_EMAIL", "SLACK_CHAT_POST_MESSAGE"]
+    },
+    {
+      "id": "output_node",
+      "type": "Output",
+      "label": "Analysis Report",
+      "nodeCategory": "end"
+    }
+  ],
+  "edges": [
+    { "source": "input_node", "target": "manager_agent" },
+    { "source": "manager_agent", "target": "market_research_agent" },
+    { "source": "manager_agent", "target": "benchmarking_agent" },
+    { "source": "manager_agent", "target": "trend_analysis_agent" },
+    { "source": "manager_agent", "target": "distribution_agent" },
+    { "source": "manager_agent", "target": "output_node" }
+  ]
+}

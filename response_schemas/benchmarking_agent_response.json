@@ -1,0 +1,74 @@
+{
+  "agent_name": "Benchmarking Agent",
+  "agent_id": "698f0498e3e5b5e3c4815d17",
+  "description": "Analyzes user-provided product metrics against competitor data to identify performance gaps and strategic opportunities",
+  "agent_type": "json",
+  "accessor": "result",
+  "auto_generated": true,
+  "response_schema": {
+    "competitive_position_score": "number",
+    "metrics_comparison": [
+      {
+        "metric_name": "string",
+        "our_value": "string",
+        "competitor_values": [
+          {
+            "competitor": "string",
+            "value": "string",
+            "variance": "string"
+          }
+        ],
+        "gap_level": "string",
+        "trend": "string"
+      }
+    ],
+    "strengths": [
+      "string"
+    ],
+    "weaknesses": [
+      "string"
+    ],
+    "recommendations": [
+      {
+        "priority": "string",
+        "action": "string",
+        "expected_impact": "string",
+        "timeframe": "string"
+      }
+    ],
+    "summary": "string"
+  },
+  "example_response": {
+    "competitive_position_score": 0,
+    "metrics_comparison": [
+      {
+        "metric_name": "sample string",
+        "our_value": "sample string",
+        "competitor_values": [
+          {
+            "competitor": "sample string",
+            "value": "sample string",
+            "variance": "sample string"
+          }
+        ],
+        "gap_level": "sample string",
+        "trend": "sample string"
+      }
+    ],
+    "strengths": [
+      "sample string"
+    ],
+    "weaknesses": [
+      "sample string"
+    ],
+    "recommendations": [
+      {
+        "priority": "sample string",
+        "action": "sample string",
+        "expected_impact": "sample string",
+        "timeframe": "sample string"
+      }
+    ],
+    "summary": "sample string"
+  }
+}

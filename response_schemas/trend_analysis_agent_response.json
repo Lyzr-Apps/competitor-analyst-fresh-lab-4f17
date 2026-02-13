@@ -1,0 +1,64 @@
+{
+  "agent_name": "Trend Analysis Agent",
+  "agent_id": "698f0498ed4ba4329f382703",
+  "description": "Identifies emerging market patterns, industry shifts, and strategic implications from collected competitive data",
+  "agent_type": "json",
+  "accessor": "result",
+  "auto_generated": true,
+  "response_schema": {
+    "trends": [
+      {
+        "name": "string",
+        "category": "string",
+        "description": "string",
+        "maturity": "string",
+        "impact": "string",
+        "time_horizon": "string",
+        "confidence": "number",
+        "implications": "string",
+        "opportunities": "string"
+      }
+    ],
+    "convergence_patterns": [
+      {
+        "pattern": "string",
+        "involved_trends": [
+          "string"
+        ],
+        "strategic_implication": "string"
+      }
+    ],
+    "disruptive_forces": [
+      "string"
+    ],
+    "strategic_summary": "string"
+  },
+  "example_response": {
+    "trends": [
+      {
+        "name": "sample string",
+        "category": "sample string",
+        "description": "sample string",
+        "maturity": "sample string",
+        "impact": "sample string",
+        "time_horizon": "sample string",
+        "confidence": 0,
+        "implications": "sample string",
+        "opportunities": "sample string"
+      }
+    ],
+    "convergence_patterns": [
+      {
+        "pattern": "sample string",
+        "involved_trends": [
+          "sample string"
+        ],
+        "strategic_implication": "sample string"
+      }
+    ],
+    "disruptive_forces": [
+      "sample string"
+    ],
+    "strategic_summary": "sample string"
+  }
+}

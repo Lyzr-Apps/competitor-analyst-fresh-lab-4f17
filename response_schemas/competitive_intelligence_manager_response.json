@@ -1,0 +1,216 @@
+{
+  "agent_name": "Competitive Intelligence Manager",
+  "agent_id": "698f04b7e3e5b5e3c4815d1e",
+  "description": "Coordinates sub-agents to collect market data, benchmark metrics, identify trends, and synthesize comprehensive competitive analysis reports",
+  "agent_type": "json",
+  "accessor": "result",
+  "auto_generated": true,
+  "response_schema": {
+    "executive_summary": "string",
+    "overall_position": "string",
+    "urgency_level": "string",
+    "confidence_score": "number",
+    "market_intelligence": {
+      "competitors": [
+        {
+          "name": "string",
+          "activities": [
+            {
+              "category": "string",
+              "title": "string",
+              "description": "string",
+              "date": "string",
+              "impact": "string",
+              "source": "string",
+              "confidence": "number"
+            }
+          ],
+          "threat_level": "string",
+          "summary": "string"
+        }
+      ],
+      "market_overview": "string",
+      "key_trends": [
+        "string"
+      ]
+    },
+    "benchmarking": {
+      "competitive_position_score": "number",
+      "metrics_comparison": [
+        {
+          "metric_name": "string",
+          "our_value": "string",
+          "competitor_values": [
+            {
+              "competitor": "string",
+              "value": "string",
+              "variance": "string"
+            }
+          ],
+          "gap_level": "string",
+          "trend": "string"
+        }
+      ],
+      "strengths": [
+        "string"
+      ],
+      "weaknesses": [
+        "string"
+      ],
+      "recommendations": [
+        {
+          "priority": "string",
+          "action": "string",
+          "expected_impact": "string",
+          "timeframe": "string"
+        }
+      ],
+      "summary": "string"
+    },
+    "trend_analysis": {
+      "trends": [
+        {
+          "name": "string",
+          "category": "string",
+          "description": "string",
+          "maturity": "string",
+          "impact": "string",
+          "time_horizon": "string",
+          "confidence": "number",
+          "implications": "string",
+          "opportunities": "string"
+        }
+      ],
+      "convergence_patterns": [
+        {
+          "pattern": "string",
+          "involved_trends": [
+            "string"
+          ],
+          "strategic_implication": "string"
+        }
+      ],
+      "disruptive_forces": [
+        "string"
+      ],
+      "strategic_summary": "string"
+    },
+    "strategic_recommendations": [
+      {
+        "priority": "string",
+        "action": "string",
+        "rationale": "string",
+        "expected_impact": "string",
+        "timeframe": "string"
+      }
+    ],
+    "generated_date": "string",
+    "competitors_analyzed": [
+      "string"
+    ]
+  },
+  "example_response": {
+    "executive_summary": "sample string",
+    "overall_position": "sample string",
+    "urgency_level": "sample string",
+    "confidence_score": 0,
+    "market_intelligence": {
+      "competitors": [
+        {
+          "name": "sample string",
+          "activities": [
+            {
+              "category": "sample string",
+              "title": "sample string",
+              "description": "sample string",
+              "date": "sample string",
+              "impact": "sample string",
+              "source": "sample string",
+              "confidence": 0
+            }
+          ],
+          "threat_level": "sample string",
+          "summary": "sample string"
+        }
+      ],
+      "market_overview": "sample string",
+      "key_trends": [
+        "sample string"
+      ]
+    },
+    "benchmarking": {
+      "competitive_position_score": 0,
+      "metrics_comparison": [
+        {
+          "metric_name": "sample string",
+          "our_value": "sample string",
+          "competitor_values": [
+            {
+              "competitor": "sample string",
+              "value": "sample string",
+              "variance": "sample string"
+            }
+          ],
+          "gap_level": "sample string",
+          "trend": "sample string"
+        }
+      ],
+      "strengths": [
+        "sample string"
+      ],
+      "weaknesses": [
+        "sample string"
+      ],
+      "recommendations": [
+        {
+          "priority": "sample string",
+          "action": "sample string",
+          "expected_impact": "sample string",
+          "timeframe": "sample string"
+        }
+      ],
+      "summary": "sample string"
+    },
+    "trend_analysis": {
+      "trends": [
+        {
+          "name": "sample string",
+          "category": "sample string",
+          "description": "sample string",
+          "maturity": "sample string",
+          "impact": "sample string",
+          "time_horizon": "sample string",
+          "confidence": 0,
+          "implications": "sample string",
+          "opportunities": "sample string"
+        }
+      ],
+      "convergence_patterns": [
+        {
+          "pattern": "sample string",
+          "involved_trends": [
+            "sample string"
+          ],
+          "strategic_implication": "sample string"
+        }
+      ],
+      "disruptive_forces": [
+        "sample string"
+      ],
+      "strategic_summary": "sample string"
+    },
+    "strategic_recommendations": [
+      {
+        "priority": "sample string",
+        "action": "sample string",
+        "rationale": "sample string",
+        "expected_impact": "sample string",
+        "timeframe": "sample string"
+      }
+    ],
+    "generated_date": "sample string",
+    "competitors_analyzed": [
+      "sample string"
+    ]
+  }
+}

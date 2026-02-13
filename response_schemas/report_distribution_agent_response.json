@@ -1,0 +1,36 @@
+{
+  "agent_name": "Report Distribution Agent",
+  "agent_id": "698f04d629d2085311337211",
+  "description": "Sends finalized competitive analysis reports via Gmail and posts summaries to designated Slack channels",
+  "agent_type": "json",
+  "accessor": "result",
+  "auto_generated": true,
+  "response_schema": {
+    "email_status": "string",
+    "slack_status": "string",
+    "recipients": [
+      "string"
+    ],
+    "slack_channel": "string",
+    "timestamp": "string",
+    "summary": "string"
+  },
+  "example_response": {
+    "email_status": "sample string",
+    "slack_status": "sample string",
+    "recipients": [
+      "sample string"
+    ],
+    "slack_channel": "sample string",
+    "timestamp": "sample string",
+    "summary": "sample string"
+  },
+  "has_module_outputs": true,
+  "module_outputs_example": {
+    "artifact_files": [
+      {
+        "file_url": "https://example.com/image.png"
+      }
+    ]
+  }
+}

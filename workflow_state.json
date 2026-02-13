@@ -1,0 +1,81 @@
+{
+  "app_name": "Competitive Intelligence Hub",
+  "created_at": "2026-02-13",
+  "agents": {
+    "market_research_agent": {
+      "agent_id": "698f049729d2085311337207",
+      "name": "Market Research Agent",
+      "description": "Searches web for real-time competitor activities, product launches, pricing changes, and market movements using Perplexity's web search capabilities",
+      "provider": "perplexity",
+      "model": "sonar-reasoning-pro",
+      "temperature": 0.2,
+      "type": "sub-agent",
+      "parent": "manager_agent",
+      "tools": [],
+      "capabilities": ["text"],
+      "response_schema_file": "response_schemas/market_research_agent_response.json"
+    },
+    "benchmarking_agent": {
+      "agent_id": "698f0498e3e5b5e3c4815d17",
+      "name": "Benchmarking Agent",
+      "description": "Analyzes user-provided product metrics against competitor data to identify performance gaps and strategic opportunities",
+      "provider": "anthropic",
+      "model": "claude-sonnet-4-5",
+      "temperature": 0.3,
+      "type": "sub-agent",
+      "parent": "manager_agent",
+      "tools": [],
+      "capabilities": ["text"],
+      "response_schema_file": "response_schemas/benchmarking_agent_response.json"
+    },
+    "trend_analysis_agent": {
+      "agent_id": "698f0498ed4ba4329f382703",
+      "name": "Trend Analysis Agent",
+      "description": "Identifies emerging market patterns, industry shifts, and strategic implications from collected competitive data",
+      "provider": "openai",
+      "model": "gpt-4.1",
+      "temperature": 0.4,
+      "type": "sub-agent",
+      "parent": "manager_agent",
+      "tools": [],
+      "capabilities": ["text"],
+      "response_schema_file": "response_schemas/trend_analysis_agent_response.json"
+    },
+    "manager_agent": {
+      "agent_id": "698f04b7e3e5b5e3c4815d1e",
+      "name": "Competitive Intelligence Manager",
+      "description": "Coordinates sub-agents to collect market data, benchmark metrics, identify trends, and synthesize comprehensive competitive analysis reports",
+      "provider": "openai",
+      "model": "gpt-4.1",
+      "temperature": 0.3,
+      "type": "manager",
+      "managed_agents": [
+        "698f049729d2085311337207",
+        "698f0498e3e5b5e3c4815d17",
+        "698f0498ed4ba4329f382703"
+      ],
+      "tools": [],
+      "capabilities": ["text"],
+      "response_schema_file": "response_schemas/competitive_intelligence_manager_response.json"
+    },
+    "distribution_agent": {
+      "agent_id": "698f04d629d2085311337211",
+      "name": "Report Distribution Agent",
+      "description": "Sends finalized competitive analysis reports via Gmail and posts summaries to designated Slack channels",
+      "provider": "openai",
+      "model": "gpt-4.1",
+      "temperature": 0.2,
+      "type": "independent",
+      "tools": ["GMAIL_SEND_EMAIL", "SLACK_CHAT_POST_MESSAGE"],
+      "capabilities": ["text", "gmail", "slack"],
+      "response_schema_file": "response_schemas/report_distribution_agent_response.json"
+    }
+  },
+  "agent_ids": [
+    "698f049729d2085311337207",
+    "698f0498e3e5b5e3c4815d17",
+    "698f0498ed4ba4329f382703",
+    "698f04b7e3e5b5e3c4815d1e",
+    "698f04d629d2085311337211"
+  ]
+}
