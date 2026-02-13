@@ -710,7 +710,7 @@ function DashboardView({
 
   return (
     <div className="flex-1 overflow-y-auto">
-      <div className="p-6 space-y-6">
+      <div className="p-6 pb-28 space-y-6">
         {/* Header */}
         <div className="flex items-center justify-between">
           <div>
@@ -843,7 +843,7 @@ function DashboardView({
 
         {/* Configuration Section */}
         <Separator />
-        <Card className="bg-card/60 backdrop-blur-md border-border/60 shadow-sm">
+        <Card className="bg-card/60 backdrop-blur-md border-border/60 shadow-sm relative z-[1000000]">
           <CardHeader>
             <CardTitle className="font-serif text-lg">Analysis Configuration</CardTitle>
             <CardDescription>Configure competitors and product metrics to generate a comprehensive competitive analysis</CardDescription>
@@ -860,7 +860,7 @@ function DashboardView({
                   onKeyDown={handleKeyDown}
                   className="flex-1"
                 />
-                <Button variant="outline" onClick={handleAddCompetitor} className="gap-1.5">
+                <Button type="button" variant="outline" onClick={handleAddCompetitor} className="gap-1.5">
                   <RiAddLine className="w-4 h-4" /> Add
                 </Button>
               </div>
@@ -869,7 +869,7 @@ function DashboardView({
                   {competitors.map((c) => (
                     <Badge key={c} variant="secondary" className="gap-1.5 pl-3 pr-1.5 py-1">
                       {c}
-                      <button onClick={() => handleRemoveCompetitor(c)} className="hover:bg-destructive/20 rounded-full p-0.5 transition-colors">
+                      <button type="button" onClick={() => handleRemoveCompetitor(c)} className="hover:bg-destructive/20 rounded-full p-0.5 transition-colors">
                         <RiCloseLine className="w-3.5 h-3.5" />
                       </button>
                     </Badge>
@@ -945,6 +945,7 @@ function DashboardView({
 
             {/* Generate Button */}
             <Button
+              type="button"
               onClick={onGenerate}
               disabled={isAnalyzing || competitors.length === 0}
               className="w-full h-12 text-base font-semibold gap-2 bg-primary hover:bg-primary/90 transition-all duration-200"
@@ -1026,7 +1027,7 @@ function ReportView({
 
   return (
     <div className="flex-1 overflow-y-auto">
-      <div className="p-6 max-w-5xl mx-auto space-y-6">
+      <div className="p-6 pb-28 max-w-5xl mx-auto space-y-6">
         {/* Header */}
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
@@ -1547,7 +1548,7 @@ function LibraryView({
 
   return (
     <div className="flex-1 overflow-y-auto">
-      <div className="p-6 space-y-6">
+      <div className="p-6 pb-28 space-y-6">
         {/* Header */}
         <div>
           <h2 className="text-2xl font-serif font-semibold tracking-tight">Reports Library</h2>
